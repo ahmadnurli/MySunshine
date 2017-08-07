@@ -3,5 +3,9 @@
     <string name="its_sunday">Sunday</string>
     <string name="moderate_plain">Moderate Plain</string>
     <string name="_17_derajat">17 Derajat</string>
+    <string name="lightRain">Light Rain</string>
+    <string name="clear">Clear</string>
+    <string name="_16">16 Derajat</string>
+    <string name="monday">Monday</string>
 
 </resources>
