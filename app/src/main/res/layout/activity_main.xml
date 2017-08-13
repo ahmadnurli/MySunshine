@@ -9,63 +9,6 @@
     tools:context="com.example.nurli.mysunshine.MainActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@drawable/grad"
-        android:orientation="vertical"
-        android:padding="@dimen/padding_header">
-
-        <TextView
-            style="@android:style/TextAppearance.DeviceDefault.Medium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/its_sunday"
-            android:textColor="@android:color/white"
-            />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@mipmap/weather_icon"/>
-
-                <TextView
-                    style="@android:style/TextAppearance.DeviceDefault.Medium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="@string/lightRain"
-                    android:textColor="@android:color/white"/>
-            </LinearLayout>
-
-            <TextView
-                style="@android:style/TextAppearance.DeviceDefault.Medium"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/_17_derajat"
-                android:textColor="@android:color/white"/>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
         android:layout_marginTop="@dimen/padding_header"
         android:layout_width="match_parent"
         android:layout_height="200dp"
@@ -74,6 +17,7 @@
         android:padding="@dimen/padding_header">
 
         <TextView
+            android:id="@+id/txt_day"
             style="@android:style/TextAppearance.DeviceDefault.Medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -95,12 +39,14 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/img_weather"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:layout_gravity="center_horizontal"
                     android:src="@mipmap/wsymbol_0001_sunny"/>
 
                 <TextView
+                    android:id="@+id/txt_weather_desc"
                     style="@android:style/TextAppearance.DeviceDefault.Medium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -110,6 +56,7 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/txt_temperature"
                 style="@android:style/TextAppearance.DeviceDefault.Medium"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -119,7 +66,14 @@
                 android:text="@string/_16"
                 android:textColor="@android:color/white"/>
 
+
+
         </LinearLayout>
 
     </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_weather_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
 </LinearLayout>
